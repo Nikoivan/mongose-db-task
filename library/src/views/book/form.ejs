@@ -1,0 +1,63 @@
+<form method="POST" class="mt-5">
+    <div class="form-group">
+        <label for="inputId">Идентификатор</label>
+        <input
+                name="id"
+                class="form-control"
+                id="inputId"
+                value="<%= book.id %>"
+        >
+    </div>
+    <div class="form-group">
+        <label for="inputTitle">Название</label>
+        <input type="text"
+               value="<%= book.title %>"
+               name="title"
+               class="form-control"
+               id="inputTitle">
+    </div>
+    <div class="form-group">
+        <label for="inputDescription">Описание</label>
+        <textarea
+                rows="3"
+                name="description"
+                class="form-control"
+                id="inputDescription"
+        ><%= book.description %></textarea>
+    </div>
+    <div class="form-group">
+        <label for="inputAuthors">Авторы</label>
+        <input type="text"
+               value="<%= book.authors %>"
+               name="authors"
+               class="form-control"
+               id="inputAuthors">
+    </div>
+    <div class="form-group">
+        <label for="inputFavorite">Лучшие</label>
+        <input type="text"
+               value="<%= book.favorite %>"
+               name="favourite"
+               class="form-control"
+               id="inputFavorite">
+    </div>
+    <div class="form-group">
+        <label for="inputFileCover">Покрытие файла</label>
+        <input type="text"
+                 value="<%= book.fileCover %>"
+                 name="fileCover"
+                 class="form-control"
+                 id="inputFileCover">
+    </div>
+    <div class="form-group">
+        <label for="inputFileName">Имя файла</label>
+        <input type="text"
+               value="<%= book.filename %>"
+               name="fileName"
+               class="form-control"
+               id="inputFileName">
+    </div>
+    <div class="form-group text-right ">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </div>
+</form>
