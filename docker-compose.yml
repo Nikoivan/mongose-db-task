@@ -1,30 +1,10 @@
+version: "1"
+
 services:
-  storage:
-    image: redis
-    volumes:
-      - ./counter/data:/data
-  counter:
-    image: nikoivan/counter
-    working_dir: /app
-    environment:
-      - PORT=3000
-      - REDIS_URL=redis://storage
+  main-db:
+    image: mongo
     ports:
-      - 8888:3000
-    command: sh -c "npm install && npm run start"
-    depends_on:
-      - storage
-  library:
-    image: nikoivan/library
-    working_dir: /app
+      - 27017:27017
     environment:
-      - PORT=8080
-      - COUNTER_URL=http://counter:3000
-    ports:
-      - 80:8080
-    command: sh -c "npm install && npm run start"
-    depends_on:
-      - storage
-      - counter
-
-
+      DB_USERNAME: root
+      DB_USER_PASSWORD: mongoDB
