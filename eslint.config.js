@@ -23,6 +23,8 @@ export default defineConfig([
       'unicorn/no-process-exit': 'off',
       'unicorn/no-array-reduce': 'off',
       'unicorn/prevent-abbreviations': 'off',
+      'unicorn/no-null': 'off',
+      'unicorn/import-style': 'off',
     },
   },
   {
